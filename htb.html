@@ -1,56 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hack The Box – takecntrl</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTB Operations - The Cyber Protocol</title>
   <style>
     body {
+      margin: 0;
+      font-family: monospace;
       background-color: #0d0d0d;
       color: #f2f2f2;
-      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #1a1a1a;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      padding-top: 2em;
+      position: sticky;
+      top: 0;
+    }
+
+    .sidebar img {
+      width: 80px;
+      margin-bottom: 2em;
+    }
+
+    .sidebar a {
+      color: #f2f2f2;
+      text-decoration: none;
+      padding: 0.75em 1em;
+      margin: 0.25em 0;
+      border: 1px solid #333;
+      border-radius: 4px;
+      width: 80%;
       text-align: center;
+      transition: 0.2s ease-in-out;
+    }
+
+    .sidebar a:hover {
+      background-color: #00ffff20;
+      color: #00ffff;
+      border-color: #00ffff;
+    }
+
+    .main-content {
+      flex: 1;
       padding: 2em;
     }
-    h1 {
-      font-size: 2.5rem;
-      color: #00ff9f;
-      text-shadow: 0 0 10px #00ff9f;
+
+    .profile-card {
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1em;
+      max-width: 600px;
+      margin: auto;
     }
-    .htb-links a {
-      display: block;
-      margin: 1em 0;
-      padding: 0.75em 1.5em;
-      background: #1a1a1a;
-      color: #ffaa00;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-    .htb-links a:hover {
-      background: #ffaa00;
-      color: #0d0d0d;
-    }
-    footer {
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #444;
+
+    .profile-card h2 {
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <h1>Hack The Box</h1>
-  <div class="htb-links">
-    <a href="https://app.hackthebox.com/profile/954382" target="_blank">📊 My HTB Profile</a>
-    <a href="#">📄 View Account Stats (Coming Soon)</a>
-    <a href="#">📝 Writeups (Coming Soon)</a>
+  <div class="sidebar">
+    <img src="tcp_logo.png" alt="TCP Mini Logo">
+    <a href="#profile">🧠 Profile</a>
+    <a href="#stats">📊 Stats</a>
+    <a href="#writeups">📝 Writeups</a>
+    <a href="#private">🔒 Private Logs</a>
   </div>
 
-  <footer>“Root or be rooted.”</footer>
+  <div class="main-content">
+    <div class="profile-card" id="profile">
+      <h2>HTB Profile: takecntrl</h2>
+      <p><strong>HTB ID:</strong> 954382</p>
+      <p><strong>Rank:</strong> <span id="rank">Loading...</span></p>
+      <p><strong>Points:</strong> <span id="points">Loading...</span></p>
+      <p><strong>Systems Pwned:</strong> <span id="systems">Loading...</span></p>
+      <p><strong>Challenges Solved:</strong> <span id="challenges">Loading...</span></p>
+    </div>
+  </div>
 </body>
 </html>
