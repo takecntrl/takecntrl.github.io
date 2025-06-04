@@ -11,6 +11,7 @@
       background-color: #0d0d0d;
       color: #f2f2f2;
       display: flex;
+      scroll-behavior: smooth;
     }
 
     .sidebar {
@@ -53,6 +54,10 @@
       padding: 2em;
     }
 
+    .section {
+      margin-bottom: 3em;
+    }
+
     .profile-card {
       background-color: #111;
       border: 1px solid #333;
@@ -60,6 +65,13 @@
       padding: 1em;
       max-width: 600px;
       margin: auto;
+      text-align: center;
+    }
+
+    .profile-card img.avatar {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1em;
     }
 
     .profile-card h2 {
@@ -77,32 +89,38 @@
   </div>
 
   <div class="main-content">
-    <div class="profile-card" id="profile">
-      <h2>HTB Profile: takecntrl</h2>
-      <p><strong>HTB ID:</strong> 954382</p>
-      <p><strong>Rank:</strong> <span id="rank">Loading...</span></p>
-      <p><strong>Points:</strong> <span id="points">Loading...</span></p>
-      <p><strong>Systems Pwned:</strong> <span id="systems">Loading...</span></p>
-      <p><strong>Challenges Solved:</strong> <span id="challenges">Loading...</span></p>
-    </div>
+    <section id="profile" class="section">
+      <div class="profile-card">
+        <img src="tcp_chibi_moon.png" alt="HTB Avatar" class="avatar">
+        <h2>HTB Profile: takecntrl</h2>
+        <p><strong>HTB ID:</strong> 954382</p>
+        <p><strong>Rank:</strong> <span id="rank">Script Kiddie</span></p>
+      </div>
+    </section>
+
+    <section id="stats" class="section">
+      <div class="profile-card">
+        <h2>HTB Stats</h2>
+        <p><strong>Points:</strong> <span id="points">16</span></p>
+        <p><strong>User Owns:</strong> <span id="systems">10</span></p>
+        <p><strong>System Owns:</strong> <span id="challenges">9</span></p>
+        <p><strong>Global Ranking:</strong> #894</p>
+      </div>
+    </section>
+
+    <section id="writeups" class="section">
+      <div class="profile-card">
+        <h2>Sanitized Writeups</h2>
+        <p>No public writeups uploaded yet. Stay tuned.</p>
+      </div>
+    </section>
+
+    <section id="private" class="section">
+      <div class="profile-card">
+        <h2>🔒 Private Logs</h2>
+        <p>Access restricted. Employer authentication required.</p>
+      </div>
+    </section>
   </div>
-
-  <script>
-    async function fetchHTBStats() {
-      try {
-        const response = await fetch('https://www.hackthebox.com/api/v4/profile/954382');
-        const data = await response.json();
-
-        document.getElementById('rank').textContent = data.rank || 'N/A';
-        document.getElementById('points').textContent = data.points || 'N/A';
-        document.getElementById('systems').textContent = data.machines?.owned?.length || 'N/A';
-        document.getElementById('challenges').textContent = data.challenges?.completed?.length || 'N/A';
-      } catch (err) {
-        console.error('HTB API error:', err);
-      }
-    }
-
-    fetchHTBStats();
-  </script>
 </body>
 </html>
