@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Michael Jackson – Cybersecurity Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cyber Protocol</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       background-color: #0d0d0d;
       color: #f2f2f2;
       font-family: 'Segoe UI', sans-serif;
@@ -15,52 +14,65 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
+      min-height: 100vh;
     }
-    h1 {
-      font-size: 2.8rem;
-      color: #00ffe1;
-      text-shadow: 0 0 10px #00ffe1;
+
+    header {
+      position: absolute;
+      top: 1em;
+      left: 1em;
     }
-    h2 {
-      font-weight: 300;
-      margin-bottom: 1.5em;
+
+    header img {
+      width: 100px;
+      height: auto;
+    }
+
+    .hero {
+      margin-top: 100px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .hero img {
+      max-width: 300px;
+      width: 80vw;
+      height: auto;
+      margin-bottom: 1em;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
       color: #888;
     }
-    .links a {
-      display: inline-block;
-      margin: 0.5em;
-      padding: 0.75em 1.5em;
-      background: #1a1a1a;
-      color: #ffaa00;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      font-weight: bold;
-    }
-    .links a:hover {
-      background: #ffaa00;
-      color: #0d0d0d;
-    }
-    footer {
-      margin-top: 3em;
-      font-size: 0.9em;
+
+    .footer-logo {
+      margin-top: 4em;
+      font-size: 0.8rem;
       color: #444;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <h1>Michael Jackson</h1>
-  <h2>Cybersecurity Analyst · Threat Hunter · Network Defender</h2>
+  <header>
+    <a href="/">
+      <img src="tcp_logo.png" alt="TCP Logo">
+    </a>
+  </header>
 
-  <div class="links">
-    <a href="Michael_Jackson_Cybersecurity_Resume.pdf" target="_blank">📄 View Resume</a>
-    <a href="https://linkedin.com/in/takecntrl" target="_blank">💼 LinkedIn</a>
-    <a href="https://github.com/takecntrl" target="_blank">🧰 GitHub</a>
-    <a href="htb.html" target="_self">🧠 Hack The Box</a>
+  <div class="hero">
+    <img src="tcp_logo.png" alt="The Cyber Protocol Logo" />
+    <h1>THE CYBER PROTOCOL</h1>
+    <p class="tagline">Built in Silence. Hidden in Shadows.<br>The Protocol is Active.</p>
   </div>
 
-  <footer>“Always Learning. Always Hunting. Here to Take Control.”</footer>
+  <div class="footer-logo">
+    <p>&copy; 2025 takecntrl.tech — Always Learning. Always Hunting.</p>
+  </div>
 </body>
 </html>
