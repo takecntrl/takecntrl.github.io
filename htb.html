@@ -86,5 +86,23 @@
       <p><strong>Challenges Solved:</strong> <span id="challenges">Loading...</span></p>
     </div>
   </div>
+
+  <script>
+    async function fetchHTBStats() {
+      try {
+        const response = await fetch('https://www.hackthebox.com/api/v4/profile/954382');
+        const data = await response.json();
+
+        document.getElementById('rank').textContent = data.rank || 'N/A';
+        document.getElementById('points').textContent = data.points || 'N/A';
+        document.getElementById('systems').textContent = data.machines?.owned?.length || 'N/A';
+        document.getElementById('challenges').textContent = data.challenges?.completed?.length || 'N/A';
+      } catch (err) {
+        console.error('HTB API error:', err);
+      }
+    }
+
+    fetchHTBStats();
+  </script>
 </body>
 </html>
