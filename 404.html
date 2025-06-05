@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCP-404 — Containment Breach</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #f2f2f2;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      scroll-behavior: smooth;
+    }
+
+    .scp-banner {
+      background-color: #111;
+      border: 2px solid #ff4d4d;
+      color: #ff4d4d;
+      font-weight: bold;
+      padding: 1em;
+      margin: 2em auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .terminal {
+      max-width: 800px;
+      background-color: #151515;
+      padding: 2em;
+      border: 1px solid #333;
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .return {
+      margin-top: 2em;
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      background-color: #111;
+      border: 1px solid #00ffff;
+      color: #00ffff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.2s ease;
+    }
+
+    .return:hover {
+      background-color: #00ffff20;
+    }
+
+    .glitch {
+      animation: glitch-flicker 1.5s infinite;
+    }
+
+    .logline {
+      color: #aaa;
+      font-size: 0.9em;
+      margin-top: 2em;
+      font-style: italic;
+    }
+
+    #echo-signal {
+      display: none;
+      background-color: #111;
+      border: 1px solid #333;
+      padding: 1em;
+      margin-top: 2em;
+      max-width: 800px;
+      animation: reveal 2s ease forwards;
+    }
+
+    @keyframes glitch-flicker {
+      0% { opacity: 1; }
+      45% { opacity: 0.6; }
+      50% { opacity: 0.2; }
+      55% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes reveal {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <img src="protocol_sequence.gif" alt="The Protocol is Active" style="width:300px; margin-bottom: 1em;">
+
+  <div class="scp-banner glitch" id="warning-banner">
+    WARNING: SECTOR IT IS REQUESTED TO CALL THE CLIENT BACK RE: SCP-SHIT
+  </div>
+
+  <div class="terminal" id="terminal-block">
+<strong>Item #:</strong> SCP-SHIT<br>
+<strong>Object Class:</strong> Keter
+
+<p><strong>SPECIAL CONTAINMENT PROCEDURES:</strong> Due to the information-technology-focused nature of SCP-SHIT’s containment protofools, iteration upon previously known closure methods is classified Level 4 or higher and subject to review and revision.</p>
+
+<p><strong>DESCRIPTION:</strong> SCP-SHIT is an anomalous process that manifests as a potentially infinite time loop within corporate ticketing systems. Once an information technology support request is initiated, it will recur cyclically despite resolution due to managerial insistence, escalating back down the chain of command regardless of actual outcome.</p>
+
+<p><strong>ADDENDUM SCP-SHIT-A:</strong> Following exposure to SCP-SHIT, morale degradation becomes evident across affected personnel. Secondary symptoms include spontaneous eye twitching, targets driven to drink black coffee excessively, and the muttering of phrases such as “didn’t we just–”, “I already told them that,” and “for tuck’s sake”. Current containment focus is on mitigating burnout in the loop.</p>
+  </div>
+
+  <div id="echo-signal">
+    <h3>[SCP-████] Echo Signal — Class: Unquantified</h3>
+    <p><strong>CONTAINMENT:</strong> None. Cannot contain what does not remain.</p>
+    <p><strong>DESCRIPTION:</strong> SCP-████ is not a file. It is not a system. It is a whisper in the protocol stack.
+    It manifests when an operator questions breach logs or attempts to trace ghost packets.</p>
+    <p><strong>SYMPTOMS:</strong> Exposure causes:
+      <ul>
+        <li>Déjà vu in terminal history</li>
+        <li>Auditory echoes of untyped keystrokes</li>
+        <li>A persistent sense that the system is watching *you*</li>
+      </ul>
+    </p>
+    <p><em>“You were not meant to see this. But now it sees you.”</em></p>
+  </div>
+
+  <a class="return" href="/">Return to Protocol Core</a>
+
+  <div class="logline" id="anomaly-log"></div>
+
+  <script>
+    const logs = [
+      "> [SCP-███] Unexpected RDP tunneling behavior observed from IP: 127.0.0.1",
+      "> [SCP-404] Attempted packet containment failed. Target vanished via smokebomb.js",
+      "> [SCP-31337] Exploit signature detected in /dev/null. Continue surveillance.",
+      "> [SCP-KAGE] Operator presence felt. Shadows stabilized.",
+      "> [SCP-9999] Unauthorized code execution in progress. Smiling.",
+      "> [SCP-VOID] Reached depth 37. No return vector."
+    ];
+    document.getElementById("anomaly-log").textContent = logs[Math.floor(Math.random() * logs.length)];
+
+    // Konami Code Detection
+    const konamiCode = [38,38,40,40,37,39,37,39,66,65];
+    let input = [];
+
+    window.addEventListener('keydown', (e) => {
+      input.push(e.keyCode);
+      if (input.length > konamiCode.length) input.shift();
+      if (input.toString() === konamiCode.toString()) {
+        document.getElementById("warning-banner").innerHTML = "[SCP-████] DECRYPTION ACTIVE — ECHO SIGNAL RELEASED";
+        document.getElementById("terminal-block").style.display = 'none';
+        document.getElementById("echo-signal").style.display = 'block';
+        document.body.classList.add('glitch');
+      }
+    });
+  </script>
+</body>
+</html>
