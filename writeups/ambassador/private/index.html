@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +10,14 @@
 <body>
   <img src="/assets/tcp_chibi_moon.png" id="corner-logo" onclick="location.href='/'" alt="logo" />
 
-  <div id="vault-locked" class="vault-container">
-    <h1>🔒 Access Restricted</h1>
+  <div id="vault-gate">
+    <h2>🔒 Access Restricted</h2>
     <p>This content is sealed. Authorized personnel only.</p>
-    <input type="password" id="vault-pass" placeholder="Enter passphrase" />
-    <button onclick="unlockVault('ambassador')">Unlock</button>
+    <input type="password" id="passphrase" placeholder="Enter passphrase" />
+    <button onclick="unlockVault()">Unlock</button>
   </div>
 
-  <div id="vault-unlocked" class="vault-hidden">
+  <div id="vault-content">
     <h1>Ambassador | Full Penetration Test Report</h1>
 
     <section>
@@ -51,8 +50,6 @@
       <p>Binary allowed shell escape due to unsafe system() call to bash.</p>
       <p>Gained root, captured both user.txt and root.txt.</p>
     </section>
-
-    <p class="return-link"><a href="/writeups/ambassador/index.html">⮐ Return to Public Writeup</a></p>
   </div>
 </body>
 </html>
