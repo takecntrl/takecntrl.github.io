@@ -1,0 +1,91 @@
+---
+File: /writeups/twomillion/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TwoMillion | Writeup</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/unlock.js" defer></script>
+</head>
+<body>
+  <img src="/assets/tcp_logo.png" id="corner-logo" onclick="location.href='/'" alt="logo" />
+
+  <div class="container">
+    <h1>HTB Writeup: TwoMillion</h1>
+    <p><strong>Difficulty:</strong> Medium &mdash; frustratingly fun</p>
+    <p><strong>Completion:</strong> User & Root</p>
+
+    <h2>⚙️ Summary</h2>
+    <p>This box involved careful enumeration of web-facing services, source-code inspection, and subtle privilege escalation via local configuration weaknesses.</p>
+
+    <h2>🧪 Tools Used</h2>
+    <ul>
+      <li>Nmap</li>
+      <li>Gobuster</li>
+      <li>Burp Suite</li>
+      <li>Custom Python Script (for token manipulation)</li>
+    </ul>
+
+    <h2>🕵️‍♂️ Attack Path (Public Summary)</h2>
+    <ol>
+      <li>Initial recon exposed non-standard login interface.</li>
+      <li>Analyzed a GitHub repo tied to the target stack (hinted via metadata).</li>
+      <li>Used source code insights to bypass authentication.</li>
+      <li>Local privilege escalation via misconfigured cron jobs.</li>
+    </ol>
+
+    <a class="vault-button" href="/writeups/twomillion/private/index.html">Request Full Report – Authorized Access Only</a>
+
+    <p class="return-link"><a href="/writeups.html">⮐ Back to Writeup Hub</a></p>
+  </div>
+</body>
+</html>
+
+
+---
+File: /writeups/twomillion/private/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TwoMillion | Private Writeup</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="/vault.js" defer></script>
+</head>
+<body>
+  <img src="/assets/tcp_chibi_moon.png" id="corner-logo" onclick="location.href='/'" alt="logo" />
+
+  <div id="vault-locked" class="vault-container">
+    <h1>🔒 Access Restricted</h1>
+    <p>This content is sealed. Authorized personnel only.</p>
+    <input type="password" id="vault-pass" placeholder="Enter passphrase" />
+    <button onclick="unlockVault('twomillion')">Unlock</button>
+  </div>
+
+  <div id="vault-unlocked" class="vault-hidden">
+    <h1>TwoMillion | Full Penetration Test Report</h1>
+
+    <section>
+      <h2>📍 Initial Enumeration</h2>
+      <p>[nmap results, directory fuzzing screenshots, version fingerprinting]</p>
+    </section>
+
+    <section>
+      <h2>🔍 Exploitation</h2>
+      <p>[Walkthrough of auth bypass, code injection, session manipulation]</p>
+    </section>
+
+    <section>
+      <h2>⬆️ Privilege Escalation</h2>
+      <p>[cronjob abuse, misconfigured scripts, proof of root]</p>
+    </section>
+
+    <p class="return-link"><a href="/writeups/twomillion/index.html">⮐ Return to Public Writeup</a></p>
+  </div>
+</body>
+</html>
