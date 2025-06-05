@@ -14,6 +14,20 @@ body {
   scroll-behavior: smooth;
 }
 
+#corner-logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  opacity: 0.85;
+  z-index: 999;
+  transition: opacity 0.3s;
+}
+
+#corner-logo:hover {
+  opacity: 1;
+}
+
 .scp-banner {
   background-color: #111;
   border: 2px solid #ff4d4d;
