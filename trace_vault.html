@@ -1,67 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trace Mapping Vault</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .vault-warning {
-      color: #ff4444;
-      font-weight: bold;
-      text-align: center;
-      animation: flicker 1s infinite alternate;
-      margin-top: 1em;
-    }
-    @keyframes flicker {
-      0%   {opacity: 1;}
-      100% {opacity: 0.4;}
-    }
-    .vault-entry {
-      background: #0d0d0d;
-      border: 1px solid #00ffff;
-      margin: 1em auto;
-      padding: 1em;
-      max-width: 600px;
-      color: #ccc;
-      font-family: monospace;
-    }
-    .vault-entry h3 {
-      margin-bottom: 0.3em;
-      color: #00ffff;
-    }
-    .vault-entry p {
-      margin-top: 0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trace Vault | takecntrl.tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="vault.js"></script>
 </head>
 <body>
   <a href="index.html">
-    <img src="tcp_logo.png" alt="TCP Logo" id="corner-logo">
+    <img src="tcp_logo.png" alt="TCP Logo" id="corner-logo" />
   </a>
+  <img src="tcp_chibi_moon.png" alt="Chibi TCP" style="max-width: 280px; display:block; margin: 1em auto;" />
 
-  <img src="tcp_chibi_moon.png" alt="Chibi TCP" style="max-width: 280px; display:block; margin: 0 auto 1em;">
+  <h1 style="color:#00ffff; text-align:center;">🧠 Trace Vault</h1>
+  <p style="text-align:center; color:#aaa;">Secure access to confidential operation logs</p>
 
-  <h1 style="color:#00ffff; text-align:center">🧠 TRACE MAPPING VAULT</h1>
-  <div class="vault-warning">⚠️ MONITORED ZONE – ALL ACCESS LOGGED ⚠️</div>
-
-  <div class="vault-entry">
-    <h3>📂 internal-staging/logs/htb-blacklab.txt</h3>
-    <p>Initial foothold obtained via Node.js deserialization exploit. Detailed path escalation pending documentation. Screenshot and nmap logs included. [🔒 Restricted]</p>
+  <div id="access-panel" style="text-align:center; margin-top:2em;">
+    <input type="password" id="vault-key" placeholder="Enter access key..." style="padding: 0.5em; font-size: 1em; width: 60%; max-width: 400px;">
+    <button onclick="unlockVault()" style="padding: 0.5em 1em; font-size: 1em; margin-left: 0.5em;">🔓 Unlock</button>
+    <p id="vault-msg" style="color: crimson; margin-top: 1em;"></p>
   </div>
 
-  <div class="vault-entry">
-    <h3>📂 live-trace/midnight-foxhunt.md</h3>
-    <p>Foxhunt was rooted using wildcard cert abuse + custom Python reverse shell. Chain linked through internal DNS leak. Credential sets recovered. [🔒]</p>
+  <div id="vault-content" style="display:none; max-width: 900px; margin: 3em auto; font-family: monospace;">
+    <h2 style="color:#ff66cc;">📁 Tsukikage // Redacted Logs</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      <li>📦 <strong>TwoMillion</strong> — Client-grade penetration report (PDF, full trace, attachments)</li>
+      <li>📦 <strong>Photobomb</strong> — Tactical notes, screenshot chain, enum results</li>
+      <li>📦 <strong>Topology</strong> — Active trace logs, exploit path notes, custom payloads</li>
+      <li>📦 <em>More traces uploading...</em></li>
+    </ul>
   </div>
-
-  <div class="vault-entry">
-    <h3>📂 vault/private/hydra-redteam-plan.pdf</h3>
-    <p>PDF of internal RT planning, pre-engagement checklists, and payload kits. Deployment order marked. [🔐 Archive Mode]</p>
-  </div>
-
-  <p style="text-align:center; color:#aaa; font-size: 0.9em; margin-top: 3em;">
-    🧬 Welcome back, Kazikage. Echo monitors. Protocol is silent.
-  </p>
 </body>
 </html>
