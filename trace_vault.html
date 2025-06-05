@@ -1,35 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trace Vault | takecntrl.tech</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="vault.js"></script>
-</head>
-<body>
-  <a href="index.html">
-    <img src="tcp_logo.png" alt="TCP Logo" id="corner-logo" />
-  </a>
-  <img src="tcp_chibi_moon.png" alt="Chibi TCP" style="max-width: 280px; display:block; margin: 1em auto;" />
+/* === Trace Vault Unlock Effects === */
 
-  <h1 style="color:#00ffff; text-align:center;">🧠 Trace Vault</h1>
-  <p style="text-align:center; color:#aaa;">Secure access to confidential operation logs</p>
+#vault-gate {
+  text-align: center;
+  margin-top: 4em;
+  color: #ffffff;
+  animation: fadeIn 1.5s ease-out;
+}
 
-  <div id="access-panel" style="text-align:center; margin-top:2em;">
-    <input type="password" id="vault-key" placeholder="Enter access key..." style="padding: 0.5em; font-size: 1em; width: 60%; max-width: 400px;">
-    <button onclick="unlockVault()" style="padding: 0.5em 1em; font-size: 1em; margin-left: 0.5em;">🔓 Unlock</button>
-    <p id="vault-msg" style="color: crimson; margin-top: 1em;"></p>
-  </div>
+#vault-gate input[type="password"] {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-top: 1em;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff5;
+  border-radius: 4px;
+}
 
-  <div id="vault-content" style="display:none; max-width: 900px; margin: 3em auto; font-family: monospace;">
-    <h2 style="color:#ff66cc;">📁 Tsukikage // Redacted Logs</h2>
-    <ul style="list-style: none; padding-left: 0;">
-      <li>📦 <strong>TwoMillion</strong> — Client-grade penetration report (PDF, full trace, attachments)</li>
-      <li>📦 <strong>Photobomb</strong> — Tactical notes, screenshot chain, enum results</li>
-      <li>📦 <strong>Topology</strong> — Active trace logs, exploit path notes, custom payloads</li>
-      <li>📦 <em>More traces uploading...</em></li>
-    </ul>
-  </div>
-</body>
-</html>
+#vault-gate button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  margin-left: 0.5em;
+  background-color: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #0ff5;
+  transition: background-color 0.3s ease;
+}
+
+#vault-gate button:hover {
+  background-color: #00cccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#vault-content {
+  opacity: 0;
+  transition: opacity 1.2s ease, box-shadow 1s ease;
+}
+
+#vault-content.active {
+  opacity: 1;
+  box-shadow: 0 0 20px #00ffff55;
+}
+
+body.vault-unlocked {
+  animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+  0% { background-color: #000; }
+  50% { background-color: #0011ff; }
+  100% { background-color: #000; }
+}
+
+ul li {
+  margin-left: 1.2em;
+  line-height: 1.4;
+}
