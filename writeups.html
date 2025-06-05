@@ -1,97 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTB Writeups | Tsukikage</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writeups | The Cyber Protocol</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <a href="index.html">
-    <img src="tcp_logo.png" alt="TCP Logo" id="corner-logo" />
-  </a>
-  <img src="tcp_chibi_moon.png" alt="Chibi TCP" style="max-width: 280px; display:block; margin: 0 auto 1em;" />
+  <img src="/assets/tcp_logo.png" id="corner-logo" onclick="location.href='/'" alt="logo" />
 
-  <h1 style="color:#00ffff; text-align:center;">📁 HTB Writeups</h1>
-  <p style="text-align:center; color:#aaa;">Public reports from the field — logged by Tsukikage</p>
+  <div class="container">
+    <h1>📂 Operation Archive: HTB Writeups</h1>
 
-  <div class="writeup-list" style="max-width: 800px; margin: 2em auto; font-family: monospace;">
+    <section class="writeup-listing">
+      <h2>Completed Writeups</h2>
+      <ul>
+        <li><a href="/writeups/ambassador/index.html">Ambassador</a></li>
+        <li><a href="/writeups/twomillion/index.html">TwoMillion</a></li>
+        <li><a href="/writeups/darkcorp/index.html">DarkCopr</a></li>
+        <li><a href="/writeups/haze/index.html">Haze</a></li>
+        <li><a href="/writeups/scepter/index.html">Scepter</a></li>
+        <li><a href="/writeups/infiltrator/index.html">Infiltrator</a></li>
+        <li><a href="/writeups/eureka/index.html">Eureka</a></li>
+        <li><a href="/writeups/whiterabbit/index.html">WhiteRabbit</a></li>
+        
+      </ul>
+    </section>
 
-    <div class="writeup-entry">
-      <h3><a href="writeups/ambassador.html">🧩 Writeup: Ambassador</a></h3>
-      <p>
-        📡 Gained user-level access through a misconfigured web service and exposed credentials.<br/>
-        🔒 Root access not yet acquired — trace incomplete.<br/>
-        🧪 Follow-up engagement pending.
-      </p>
-    </div>
+    <section class="writeup-inprogress">
+      <h2>Upcoming Ops</h2>
+      <ul>
+        <li>DarkCorp</li>
+        <li>Haze</li>
+        <li>Scepter</li>
+        <li>Infiltrator</li>
+        <li>Eureka</li>
+        <li>WhiteRabbit</li>
+      </ul>
+    </section>
 
-    <div class="writeup-entry">
-      <h3><a href="writeups/photobomb.html">🧩 Writeup: Photobomb</a></h3>
-      <p>
-        📸 Exploited insecure file handling on a photo app.<br/>
-        🧼 Injected reverse shell via EXIF metadata.<br/>
-        🔓 Rooted through a misconfigured SUID binary.<br/>
-        📄 Writeup in progress.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/monitors.html">🧩 Writeup: MonitorsTwo</a></h3>
-      <p>
-        📺 Weak credentials on web monitor led to user shell.<br/>
-        🛠️ Escalation via exposed Docker group access.<br/>
-        📄 Notes logged — page under development.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/squashed.html">🧩 Writeup: Squashed</a></h3>
-      <p>
-        🧱 Squashed containerized instance allowed injection into volume mounts.<br/>
-        🐚 Gained interactive shell and rooted via cron hijack.<br/>
-        📝 Full trace pending.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/busqueda.html">🧩 Writeup: Busqueda</a></h3>
-      <p>
-        🔎 Discovered exposed search API with code injection vector.<br/>
-        💥 Chained injection to read local config files and spawn shell.<br/>
-        📄 Internal log only for now.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/stocker.html">🧩 Writeup: Stocker</a></h3>
-      <p>
-        🛒 Found weak session management and exposed dev panel.<br/>
-        🔐 Used predictable tokens to pivot into root.<br/>
-        📜 Writeup coming soon.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/twomillion.html">🧩 Writeup: TwoMillion</a></h3>
-      <p>
-        🧠 Originally launched as a live box. Infamous for frustration.<br/>
-        🧭 Guidance from a colleague helped trace the GitHub path.<br/>
-        🔍 Custom binary reversed, token leak found, rooted via chained escalation.<br/>
-        🔥 A personal milestone. Writeup coming soon.
-      </p>
-    </div>
-
-    <div class="writeup-entry">
-      <h3><a href="writeups/topology.html">🧩 Writeup: Topology</a></h3>
-      <p>
-        🕸️ Exploited an internal topology mapping script.<br/>
-        📌 Pivoted through open internal ports and user leakage.<br/>
-        🧨 Rooted by abusing startup scripts and SSH key exposure.<br/>
-        📝 Trace logs captured.
-      </p>
-    </div>
-
+    <p class="return-link"><a href="/htb.html">⮐ Return to HTB Dashboard</a></p>
   </div>
 </body>
 </html>
