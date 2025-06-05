@@ -110,6 +110,28 @@ body {
   font-style: italic;
 }
 
+/* === Trace Vault Unlock Effects === */
+
+#vault-content {
+  opacity: 0;
+  transition: opacity 1.2s ease, box-shadow 1s ease;
+}
+
+#vault-content.active {
+  opacity: 1;
+  box-shadow: 0 0 20px #00ffff55;
+}
+
+body.vault-unlocked {
+  animation: pulse 1s ease-out;
+}
+
+@keyframes pulse {
+  0% { background-color: #000; }
+  50% { background-color: #001f1f; }
+  100% { background-color: #000; }
+}
+
 ul li {
   margin-left: 1.2em;
   line-height: 1.4;
