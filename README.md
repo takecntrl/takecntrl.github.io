@@ -1,4 +1,4 @@
-# takecntrl.github.io
+# takecntrl.tech
 Personal cybersecurity site for Michael Jackson – Network Security Engineer | Threat Analyst | Pentester
 
 🔐 Security+ | CySA+ | eJPT (in progress)  
