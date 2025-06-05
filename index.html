@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michael Jackson — Cybersecurity Analyst</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="unlock.js" defer></script>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<!-- or -->
-<link rel="icon" href="/assets/favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cyber Protocol</title>
 
+  <!-- Meta & Favicon -->
+  <meta name="description" content="Tsukikage's cybersecurity domain – Red Team reports, writeups, and deep recon. Always Hunting. Always Learning. Take Control.">
+  <link rel="icon" href="/assets/tcp_logo.png" type="image/png" />
+
+  <!-- Styles & Scripts -->
+  <link rel="stylesheet" href="style.css" />
+  <script src="unlock.js" defer></script>
 </head>
 <body>
-  <img src="tcp_logo.png" alt="The Cyber Protocol" style="max-width: 300px; display:block; margin: 0 auto 1em;">
-  <img src="tcp_logo.png" alt="TCP Logo" id="corner-logo">
-  <h1 style="color:#00ffff">Michael Jackson</h1>
-  <p>Cybersecurity Analyst · Threat Hunter · Network Defender</p>
 
-  <div style="margin: 2em auto; display: flex; gap: 1em;">
+  <!-- Corner Logo (clickable) -->
+  <img src="/assets/tcp_logo.png" alt="TCP Logo" id="corner-logo" onclick="location.href='/'" style="cursor: pointer; position: absolute; top: 20px; left: 20px; width: 60px;">
+
+  <!-- Center Hero Logo -->
+  <img src="/assets/tcp_logo.png" alt="The Cyber Protocol" style="max-width: 300px; display: block; margin: 0 auto 1em;" />
+
+  <!-- Title & Identity -->
+  <h1 class="glow-text" style="text-align: center;">Tsukikage Kuroya</h1>
+  <p style="text-align: center;">Cybersecurity Analyst · Threat Hunter · Network Defender</p>
+  <p style="text-align: center;">Encrypted Contact: <span class="code">kazikage [at] takecntrl [dot] tech</span></p>
+
+  <!-- Navigation Buttons -->
+  <div style="margin: 2em auto; display: flex; justify-content: center; gap: 1em;">
     <a class="return" href="Michael_Jackson_Cybersecurity_Resume.pdf">📄 View Resume</a>
     <a class="return" href="https://linkedin.com/in/takecntrl">💼 LinkedIn</a>
     <a class="return" href="https://github.com/takecntrl">🧰 GitHub</a>
     <a class="return" href="htb.html">🧠 Hack The Box</a>
   </div>
 
-  <div id="echo-flag" style="display:none; color:#00ffff; margin-top:2em; font-style: italic;">
-    Echo Signal: <span style="color:#f44">Active</span> — You are being observed.
+  <!-- Optional Echo Flag -->
+  <div id="echo-flag" style="display: none; color: #00ffff; margin-top: 2em; font-style: italic; text-align: center;">
+    Echo Signal: <span style="color: #f44;">Active</span> — You are being observed.
   </div>
 
+  <!-- Konami Key Trigger -->
   <script>
-    if (window.echoUnlocked) {
-      const flag = document.getElementById("echo-flag");
-      if (flag) flag.style.display = 'block';
-    }
+    document.addEventListener('keydown', e => {
+      if (e.key === '~') {
+        console.log(">> Signal accepted.\n> Operator: Tsukikage\n> Status: 🔐 Live & Traced.");
+        const flag = document.getElementById("echo-flag");
+        if (flag) flag.style.display = 'block';
+      }
+    });
   </script>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #888;">
+    © 2025 – The Cyber Protocol. All rights reserved.
+  </footer>
+
 </body>
 </html>
