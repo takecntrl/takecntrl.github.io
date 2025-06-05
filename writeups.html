@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HTB Writeups | Tsukikage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,26 +13,85 @@
   <img src="tcp_chibi_moon.png" alt="Chibi TCP" style="max-width: 280px; display:block; margin: 0 auto 1em;" />
 
   <h1 style="color:#00ffff; text-align:center;">📁 HTB Writeups</h1>
-  <p style="text-align:center; color:#aaa;">Public reports from the field—curated by Tsukikage</p>
+  <p style="text-align:center; color:#aaa;">Public reports from the field — logged by Tsukikage</p>
 
   <div class="writeup-list" style="max-width: 800px; margin: 2em auto; font-family: monospace;">
-    <div class="writeup-entry" style="margin-bottom: 2em;">
-      <h3 style="color:#00ffff;">🧩 Writeup: Editorial</h3>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/ambassador.html">🧩 Writeup: Ambassador</a></h3>
       <p>
-        Exploited a simple publishing website via SSRF vulnerability to access an internal API, leaked credentials, and escalated privileges using a GitPython CVE. Full details can be found in the write-up.
+        📡 Gained user-level access through a misconfigured web service and exposed credentials.<br/>
+        🔒 Root access not yet acquired — trace incomplete.<br/>
+        🧪 Follow-up engagement pending.
       </p>
-      <a href="https://0xdf.gitlab.io/2024/10/19/htb-editorial.html" target="_blank" style="color:#00ffff;">Read more</a>
     </div>
 
-    <div class="writeup-entry" style="margin-bottom: 2em;">
-      <h3 style="color:#00ffff;">🧩 Writeup: Writer</h3>
+    <div class="writeup-entry">
+      <h3><a href="writeups/photobomb.html">🧩 Writeup: Photobomb</a></h3>
       <p>
-        Enumerated open ports and services, discovered a SQL Injection vulnerability in the login page, exploited it to read sensitive files, and escalated privileges by leveraging a cron job and group permissions.
+        📸 Exploited insecure file handling on a photo app.<br/>
+        🧼 Injected reverse shell via EXIF metadata.<br/>
+        🔓 Rooted through a misconfigured SUID binary.<br/>
+        📄 Writeup in progress.
       </p>
-      <a href="https://medium.com/@ardian.danny/hackthebox-writer-writeup-bf023f7a692b" target="_blank" style="color:#00ffff;">Read more</a>
     </div>
 
-    <!-- Add more write-up entries as needed -->
+    <div class="writeup-entry">
+      <h3><a href="writeups/monitors.html">🧩 Writeup: MonitorsTwo</a></h3>
+      <p>
+        📺 Weak credentials on web monitor led to user shell.<br/>
+        🛠️ Escalation via exposed Docker group access.<br/>
+        📄 Notes logged — page under development.
+      </p>
+    </div>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/squashed.html">🧩 Writeup: Squashed</a></h3>
+      <p>
+        🧱 Squashed containerized instance allowed injection into volume mounts.<br/>
+        🐚 Gained interactive shell and rooted via cron hijack.<br/>
+        📝 Full trace pending.
+      </p>
+    </div>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/busqueda.html">🧩 Writeup: Busqueda</a></h3>
+      <p>
+        🔎 Discovered exposed search API with code injection vector.<br/>
+        💥 Chained injection to read local config files and spawn shell.<br/>
+        📄 Internal log only for now.
+      </p>
+    </div>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/stocker.html">🧩 Writeup: Stocker</a></h3>
+      <p>
+        🛒 Found weak session management and exposed dev panel.<br/>
+        🔐 Used predictable tokens to pivot into root.<br/>
+        📜 Writeup coming soon.
+      </p>
+    </div>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/twomillion.html">🧩 Writeup: TwoMillion</a></h3>
+      <p>
+        🧠 Originally launched as a live box. Infamous for frustration.<br/>
+        🧭 Guidance from a colleague helped trace the GitHub path.<br/>
+        🔍 Custom binary reversed, token leak found, rooted via chained escalation.<br/>
+        🔥 A personal milestone. Writeup coming soon.
+      </p>
+    </div>
+
+    <div class="writeup-entry">
+      <h3><a href="writeups/topology.html">🧩 Writeup: Topology</a></h3>
+      <p>
+        🕸️ Exploited an internal topology mapping script.<br/>
+        📌 Pivoted through open internal ports and user leakage.<br/>
+        🧨 Rooted by abusing startup scripts and SSH key exposure.<br/>
+        📝 Trace logs captured.
+      </p>
+    </div>
+
   </div>
 </body>
 </html>
