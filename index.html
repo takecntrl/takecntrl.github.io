@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>takecntrl.tech — The Cyber Protocol</title>
-
-  <meta name="description" content="Sigrhjarta's cybersecurity sanctum — Signals. Traps. Writeups. Surveillance.">
+  <title>takecntrl.tech — Michael Jackson | Offensive Security Engineer</title>
+  <meta name="description" content="Offensive security engineer specializing in threat emulation, exploit dev, and custom tooling. Secret cleared. SANS Bachelor's in progress.">
   <link rel="icon" href="/assets/tcp_logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
-  <script src="unlock.js" defer></script>
+  <script src="unlock.js" defer></script> <!-- Keep if you want the hidden stuff -->
 </head>
 <body>
-
   <!-- Corner Logo -->
   <img src="/assets/tcp_logo.png" alt="TCP Logo" id="corner-logo" onclick="location.href='/'" />
 
-  <!-- Hero Logo -->
-  <img src="/assets/tcp_logo.png" alt="The Cyber Protocol" style="max-width: 300px; display: block; margin: 0 auto 1em;" />
-
-  <!-- Identity -->
-  <h1 class="glow-text" style="text-align: center;">Michael Jackson</h1>
-  <p style="text-align: center;">Cybersecurity Architect · Threat Hunter · Protocol Guardian</p>
+  <!-- Hero -->
+  <div style="text-align: center; margin: 2em 0;">
+    <img src="/assets/tcp_logo.png" alt="The Cyber Protocol" style="max-width: 300px;" />
+    <h1 class="glow-text">Michael Jackson</h1>
+    <p>Cybersecurity Architect · Threat Hunter · Offensive Security Engineer</p>
+    <p>Secret Clearance · SANS Bachelor's (in progress) · takecntrl on HTB</p>
+    <div style="margin: 1em 0;">
+      <a class="return" href="Michael_Jackson_Resume_2025.pdf">📄 Download Resume</a>
+      <a class="return" href="https://github.com/takecntrl/forge">🛠️ Forge on GitHub</a>
+    </div>
+  </div>
 
   <!-- Navigation -->
   <div style="margin: 2em auto; display: flex; justify-content: center; gap: 1em;">
@@ -31,33 +34,25 @@
     <a class="return" href="contact.html">📨 Contact</a>
   </div>
 
-  <!-- Konami Flag -->
-  <div id="echo-flag" style="display: none; color: #00ffff; margin-top: 2em; font-style: italic; text-align: center;">
-    Echo Signal: <span style="color: #f44;">Active</span> — You are being observed.
-  </div>
+  <!-- Forge Section -->
+  <section style="margin: 2em 0; text-align: center;">
+    <h2>Forge — My Exploit Arsenal</h2>
+    <p>Automated bash suite for harvesting, tagging, and searching 400+ CVEs. Used in freelance pentests.</p>
+    <img src="screenshots/forge_tui.png" alt="Forge TUI Demo" style="max-width: 600px;" /> <!-- Add your screenshot -->
+    <p><a href="https://github.com/takecntrl/forge">View on GitHub →</a></p>
+  </section>
 
-  <!-- Good Luck Fragment -->
-  <p class="logline" style="text-align: center; margin-top: 4em;">
-    good luck.
-  </p>
-
-  <!-- Konami Trigger -->
-  <script>
-    document.addEventListener('keydown', e => {
-      if (e.key === '~') {
-        console.log(">> Signal accepted.\n> Operator: Sigrhjarta\n> Status: 🔐 Live & Traced.");
-        const flag = document.getElementById("echo-flag");
-        if (flag) flag.style.display = 'block';
-      }
-    });
-  </script>
+  <!-- HTB Embed (keep yours, or add widget if needed) -->
+  <section style="margin: 2em 0; text-align: center;">
+    <h2>Hack The Box</h2>
+    <p>takecntrl — Blind solves, no walkthroughs.</p>
+    <iframe src="https://app.hackthebox.com/embed/profile/954382" width="600" height="300"></iframe> <!-- Embed widget if available -->
+  </section>
 
   <!-- Footer -->
   <footer style="text-align: center; padding: 20px; font-size: 0.9em; color: #888;">
-    © 2015 - 2025 – The Cyber Protocol<br/>
-    Operated by Michael Jackson — “Always Hunting. Always Learning.”
+    © 2015 - 2025 – Michael Jackson<br/>
+    Always Hunting. Always Learning.
   </footer>
-
 </body>
 </html>
-
