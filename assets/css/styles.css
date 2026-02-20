@@ -490,7 +490,7 @@ footer {
   }
 }
 
-/* Contact Page */
+/* Contact Page - Improved Layout */
 .contact-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -512,11 +512,17 @@ footer {
 
 .contact-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr; /* Stack on mobile */
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 80px;
   padding: 0 5%;
+}
+
+@media (min-width: 768px) {
+  .contact-options {
+    grid-template-columns: repeat(2, 1fr); /* Side-by-side on desktop/tablet */
+  }
 }
 
 .contact-card {
@@ -540,7 +546,7 @@ footer {
 }
 
 .contact-card ul li {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 1.2rem;
 }
 
