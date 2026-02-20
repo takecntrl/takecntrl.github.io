@@ -13,3 +13,30 @@ a:hover {
   text-decoration: underline;
 }
 /* Add more later for nav, dropdowns, sections */
+.navbar {
+  background-color: #000000; /* Black */
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #121212;
+  list-style: none;
+  padding: 10px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
