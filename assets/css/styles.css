@@ -337,7 +337,7 @@ footer {
   list-style: disc;
 }
 
-/* Services Page */
+/* Services - Enhanced Cards & Layout */
 .services-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -350,10 +350,17 @@ footer {
   margin-bottom: 15px;
 }
 
+.services-hero .lead {
+  font-size: 1.4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #cccccc;
+}
+
 .package-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto 60px;
   padding: 0 5%;
@@ -361,21 +368,23 @@ footer {
 
 .package-card {
   background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 30px;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 35px 25px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .package-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 191, 255, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 191, 255, 0.2);
 }
 
 .package-card.featured {
   border-color: #00bfff;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+  background-color: #1e2a3a;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
 }
 
 .package-header {
@@ -390,31 +399,33 @@ footer {
   width: 60px;
   height: 60px;
   object-fit: contain;
+  filter: brightness(1.2);
 }
 
 .package-header h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 0;
   color: #00bfff;
 }
 
 .price {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin: 15px 0 25px;
 }
 
 .features {
   list-style: none;
   text-align: left;
   margin-bottom: 30px;
+  padding-left: 0;
 }
 
 .features li {
   margin-bottom: 12px;
   font-size: 1.1rem;
-  padding-left: 25px;
+  padding-left: 30px;
   position: relative;
 }
 
@@ -423,18 +434,19 @@ footer {
   color: #00bfff;
   position: absolute;
   left: 0;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .disclaimer {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
-  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto 80px;
+  padding: 25px;
   background-color: #1a1a1a;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #333;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #cccccc;
 }
 
