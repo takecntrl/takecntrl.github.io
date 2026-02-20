@@ -1,56 +1,30 @@
-body {
-  background-color: #121212; /* Dark gray/black */
-  color: #ffffff; /* White text */
-  font-family: 'Arial', sans-serif;
+/* Base Reset & Dark Theme */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background-color: #121212; /* Dark gray/black */
+  color: #ffffff;            /* White text */
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Links & Hover */
 a {
-  color: #00bfff; /* Blue accent */
+  color: #00bfff; /* Bright blue accent */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
+  color: #009acd; /* Darker blue on hover */
   text-decoration: underline;
 }
-/* Add more later for nav, dropdowns, sections */
-.navbar {
-  background-color: #000000; /* Black */
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #121212;
-  list-style: none;
-  padding: 10px;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.hero {
-  text-align: center;
-  padding: 50px;
-  background-color: #1a1a1a; /* Slightly lighter dark */
-}
-.cta {
-  background-color: #00bfff;
-  padding: 10px 20px;
-  color: #000;
-  border-radius: 5px;
-}
+
+/* Navbar */
 .navbar {
   background-color: #0a0a0a;
   padding: 15px 5%;
@@ -65,6 +39,7 @@ a:hover {
 
 .logo img {
   height: 50px; /* Adjust as needed */
+  width: auto;
 }
 
 .nav-links {
@@ -77,15 +52,15 @@ a:hover {
 
 .nav-links li a {
   color: #ffffff;
-  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
   color: #00bfff;
 }
 
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -98,6 +73,8 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
   z-index: 1;
   margin-top: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .dropdown-content li {
@@ -105,17 +82,19 @@ a:hover {
 }
 
 .dropdown-content li a {
-  color: #ffffff;
   display: block;
+  color: #ffffff;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 5%;
-  background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('assets/img/hero-bg.jpg'); /* Optional bg image later */
+  background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)); /* Optional bg image later */
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -124,7 +103,7 @@ a:hover {
 
 .hero h1 {
   font-size: 4rem;
-  margin: 0;
+  margin-bottom: 10px;
   color: #00bfff;
 }
 
@@ -140,14 +119,19 @@ a:hover {
   margin: 20px auto;
 }
 
+/* Buttons */
+.cta-buttons {
+  margin-top: 30px;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 30px;
   margin: 10px;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .btn.primary {
@@ -157,6 +141,7 @@ a:hover {
 
 .btn.primary:hover {
   background-color: #009acd;
+  transform: translateY(-2px);
 }
 
 .btn.secondary {
@@ -168,4 +153,18 @@ a:hover {
 .btn.secondary:hover {
   background-color: #00bfff;
   color: #000;
+}
+
+/* Mobile Responsiveness (basic) */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero {
+    padding: 60px 5%;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+  }
 }
