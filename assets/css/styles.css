@@ -337,7 +337,7 @@ footer {
   list-style: disc;
 }
 
-/* Services - Enhanced Cards & Layout */
+/* Services - Consolidated & Enhanced Cards/Grid */
 .services-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -361,7 +361,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto 60px;
   padding: 0 5%;
 }
@@ -385,6 +385,7 @@ footer {
   border-color: #00bfff;
   background-color: #1e2a3a;
   box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
+  transform: scale(1.05); /* Slight size boost */
 }
 
 .package-header {
@@ -450,3 +451,41 @@ footer {
   color: #cccccc;
 }
 
+.contact-cta {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-cta a {
+  color: #00bfff;
+  font-weight: bold;
+}
+
+.contact-cta a:hover {
+  text-decoration: none;
+  color: #009acd;
+}
+
+/* Force 3 columns on desktop/wide screens */
+@media (min-width: 1024px) {
+  .package-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .package-card {
+    padding: 25px 15px;
+  }
+  .package-header h2 {
+    font-size: 1.8rem;
+  }
+}
