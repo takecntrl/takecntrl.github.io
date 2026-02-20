@@ -490,7 +490,7 @@ footer {
   }
 }
 
-/* Contact Page - Three Card Grid */
+/* Contact Page - Three Card Grid (Fixed) */
 .contact-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -512,11 +512,38 @@ footer {
 
 .contact-options {
   display: grid;
-  grid-template-columns: 1fr; /* Stack on mobile */
+  grid-template-columns: 1fr; /* Stack on very small screens */
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px; /* Wider to fit 3 comfortably */
   margin: 0 auto 80px;
   padding: 0 5%;
+}
+
+@media (min-width: 1024px) {
+  .contact-options {
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns on desktop */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contact-options {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+.contact-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
 }
 
 .contact-header {
@@ -540,21 +567,6 @@ footer {
   color: #00bfff;
 }
 
-.contact-card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
-}
-
 .contact-card p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -563,23 +575,11 @@ footer {
 
 .contact-card .btn {
   display: block;
-  width: 80%;
+  width: 100%; /* Full width button to fit text */
+  padding: 14px 20px;
+  font-size: 1.1rem;
   margin: 0 auto;
-  padding: 14px;
-  font-size: 1.2rem;
+  white-space: normal; /* Allow text wrap if needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
-/* Force 3 columns on desktop */
-@media (min-width: 1024px) {
-  .contact-options {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* 2 columns on tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .contact-options {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
