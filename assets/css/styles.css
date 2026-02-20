@@ -1,0 +1,15 @@
+body {
+  background-color: #121212; /* Dark gray/black */
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #00bfff; /* Blue accent */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Add more later for nav, dropdowns, sections */
