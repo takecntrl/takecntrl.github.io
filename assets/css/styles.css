@@ -557,3 +557,26 @@ footer {
   padding: 14px;
   font-size: 1.2rem;
 }
+
+/* Contact - Inline Icon Headers */
+.contact-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.contact-header h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #00bfff;
+}
+
