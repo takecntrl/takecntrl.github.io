@@ -205,7 +205,7 @@ footer {
   list-style: disc;
 }
 
-/* About Page Styles */
+/* About Page - Enhanced */
 .about-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -236,15 +236,52 @@ footer {
   color: #cccccc;
 }
 
-.credentials {
-  max-width: 1200px;
-  margin: 0 auto 60px;
+.mission, .values, .approach {
+  max-width: 1000px;
+  margin: 0 auto 80px;
   padding: 0 5%;
+  text-align: center;
+}
+
+.mission h2, .values h2, .approach h2 {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.value-item {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 191, 255, 0.15);
+}
+
+.value-item img {
+  margin-bottom: 15px;
+  filter: brightness(1.2);
+}
+
+.value-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #00bfff;
 }
 
 .cred-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
@@ -253,7 +290,6 @@ footer {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #333;
-  text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -262,46 +298,41 @@ footer {
   box-shadow: 0 15px 30px rgba(0, 191, 255, 0.15);
 }
 
-.cred-card img {
-  margin-bottom: 20px;
+.cred-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cred-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
   filter: brightness(1.2);
 }
 
-.cred-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+.cred-header h3 {
+  font-size: 1.8rem;
+  margin: 0;
   color: #00bfff;
+}
+
+.cred-card p, .cred-card ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .cred-card ul {
   list-style: none;
-  text-align: left;
+  padding-left: 0;
 }
 
 .cred-card ul li {
   margin-bottom: 10px;
-  font-size: 1.1rem;
 }
 
 .cred-card ul ul {
   margin-left: 20px;
   list-style: disc;
-}
-
-.approach {
-  max-width: 900px;
-  margin: 0 auto 80px;
-  padding: 0 5%;
-  text-align: center;
-}
-
-.approach h2 {
-  font-size: 2.5rem;
-  color: #00bfff;
-  margin-bottom: 20px;
-}
-
-.approach p {
-  font-size: 1.2rem;
-  line-height: 1.8;
 }
