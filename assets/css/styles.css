@@ -112,3 +112,60 @@ a:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.hero {
+  text-align: center;
+  padding: 100px 5%;
+  background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)), url('assets/img/hero-bg.jpg'); /* Optional bg image later */
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #00bfff;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn.primary {
+  background-color: #00bfff;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background-color: #009acd;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #00bfff;
+  color: #00bfff;
+}
+
+.btn.secondary:hover {
+  background-color: #00bfff;
+  color: #000;
+}
