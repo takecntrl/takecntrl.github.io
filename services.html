@@ -2,23 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Cyber Protocol - Home</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-  <!-- Nav menu here -->
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Cyber Protocol - Home</title>
+  <title>The Cyber Protocol - Services</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/img/icons/logo.png" alt="The Cyber Protocol Logo">
+      <img src="assets/img/logo.png" alt="The Cyber Protocol Logo">
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -26,10 +17,9 @@
       <li class="dropdown">
         <a href="services.html">Services ▾</a>
         <ul class="dropdown-content">
-          <li><a href="services.html#pentest">Penetration Testing</a></li>
-          <li><a href="services.html#vuln">Vulnerability Assessments</a></li>
-          <li><a href="services.html#detection">Detection Engineering</a></li>
-          <li><a href="services.html#automation">Automation & Scripting</a></li>
+          <li><a href="#quick-scan">Quick Scan</a></li>
+          <li><a href="#full-assessment">Full Assessment</a></li>
+          <li><a href="#advanced-pentest">Advanced Pentest</a></li>
         </ul>
       </li>
       <li><a href="projects.html">Projects</a></li>
@@ -39,22 +29,73 @@
   </nav>
 
   <main>
-    <!-- Page content will go here -->
+    <section class="services-hero">
+      <h1>Security Services</h1>
+      <p class="lead">Tailored ethical testing and defense hardening, delivered by a DoD-cleared specialist with real-world classified experience.</p>
+    </section>
+
+    <section class="packages">
+      <div class="package-grid">
+        <!-- Quick Scan -->
+        <div class="package-card" id="quick-scan">
+          <div class="package-header">
+            <img src="assets/img/icons/shield.png" alt="Quick Scan Icon" width="60">
+            <h2>Quick Scan</h2>
+          </div>
+          <div class="price">$30</div>
+          <ul class="features">
+            <li>Automated vulnerability scan (1 URL/domain)</li>
+            <li>Basic report with key findings & simple remediation</li>
+            <li>1 revision</li>
+            <li>Delivery: 2 days</li>
+          </ul>
+          <a href="https://www.fiverr.com/takecntrl" class="btn primary" target="_blank">Order on Fiverr</a>
+        </div>
+
+        <!-- Full Assessment -->
+        <div class="package-card featured" id="full-assessment">
+          <div class="package-header">
+            <img src="assets/img/icons/lock.png" alt="Full Assessment Icon" width="60">
+            <h2>Full Assessment</h2>
+          </div>
+          <div class="price">$100</div>
+          <ul class="features">
+            <li>Manual + automated testing (up to 5 URLs/pages)</li>
+            <li>Detailed report with PoC (non-destructive), risk prioritization, screenshots</li>
+            <li>Step-by-step remediation guidance</li>
+            <li>2 revisions</li>
+            <li>Delivery: 4 days</li>
+          </ul>
+          <a href="https://www.fiverr.com/takecntrl" class="btn primary" target="_blank">Order on Fiverr</a>
+        </div>
+
+        <!-- Advanced Pentest -->
+        <div class="package-card" id="advanced-pentest">
+          <div class="package-header">
+            <img src="assets/img/icons/target.png" alt="Advanced Pentest Icon" width="60"> <!-- Use target if you have it, or shield -->
+            <h2>Advanced Pentest</h2>
+          </div>
+          <div class="price">$500</div>
+          <ul class="features">
+            <li>In-depth ethical penetration testing (expanded scope)</li>
+            <li>Full professional report with remediation guidance</li>
+            <li>1 free retest after fixes</li>
+            <li>3 revisions</li>
+            <li>Delivery: 7 days</li>
+          </ul>
+          <a href="contact.html" class="btn primary">Contact for Custom Scope</a>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>Important:</strong> All services require explicit written permission and a signed Rules of Engagement (RoE). No unauthorized or destructive testing is performed. Compliance and confidentiality are non-negotiable.</p>
+      </div>
+    </section>
   </main>
-</body>
-</html>
-  <header>
-    <!-- Hero section here -->
-    <header class="hero">
-  <h1>The Cyber Protocol</h1>
-  <p>DoD-Cleared Offensive Security Specialist | Classified Environment Experience | Ethical Testing & Proactive Defenses</p>
-  <a href="services.html" class="cta">Explore Services</a>
-</header>
-  </header>
-  <!-- Other sections -->
+
   <footer>
-  © 2015–2025 The Cyber Protocol<br>
-  Always Hunting. Always Learning.
-</footer>
+    © 2015–2025 The Cyber Protocol<br>
+    Always Hunting. Always Learning.
+  </footer>
 </body>
 </html>
