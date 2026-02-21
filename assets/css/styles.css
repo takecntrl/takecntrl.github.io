@@ -490,7 +490,7 @@ footer {
   }
 }
 
-/* Contact Page - Two Cards Top, Full-Width Notes Below */
+/* Contact Page - Two Top Cards + Full-Width Notes Below */
 .contact-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -573,20 +573,18 @@ footer {
 
 .contact-card .btn {
   display: block;
-  width: 100%; /* Full width to fit long text */
+  width: 100%;
   padding: 14px 20px;
   font-size: 1.1rem;
   margin: 0 auto;
-  white-space: normal; /* Allow text wrap */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
 }
 
-/* Important Notes - Full-width, centered */
+/* Important Notes - Full-width, centered, standout */
 .important-notes {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 50px 40px;
   background-color: #1e2a3a;
   border: 2px solid #00bfff;
   border-radius: 12px;
