@@ -630,3 +630,17 @@ footer {
 .important-notes h2 {
   color: #ffffff;
 }
+
+.price--network {
+  font-size: 1.4rem;        /* Matches bullet size range, readable but not tiny */
+  font-weight: 600;         /* Semi-bold instead of full bold */
+  color: #00bfff;           /* Your accent blue */
+  margin: 20px 0 25px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.price--network span {
+  font-size: 1.6rem;        /* Slightly larger for the monthly number */
+  font-weight: bold;
+}
