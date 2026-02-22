@@ -1,110 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - The Cyber Protocol</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cyber Protocol - About</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Navbar (consistent) -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">The Cyber Protocol</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.fiverr.com/takecntrl" target="_blank">Fiverr</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="The Cyber Protocol Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="dropdown">
+        <a href="services.html">Services ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="services.html#pentest">Penetration Testing</a></li>
+          <li><a href="services.html#vuln">Vulnerability Assessments</a></li>
+          <li><a href="services.html#detection">Detection Engineering</a></li>
+          <li><a href="services.html#automation">Automation & Scripting</a></li>
+        </ul>
+      </li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.fiverr.com/takecntrl" target="_blank">Fiverr</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero/About Intro -->
+  <main>
     <section class="about-hero">
-        <div class="container">
-            <h1>The Cyber Protocol, LLC – About</h1>
-            <p>The Cyber Protocol, LLC delivers reliable network support, website security, and ethical penetration testing to organizations that require consistent uptime, reduced risk, and proactive protection.</p>
-            <p>We combine deep technical expertise with clear communication and accountable service delivery to keep critical systems secure and operational.</p>
-        </div>
+      <div class="badge">DoD Secret Clearance</div>
+      <h1>About The Cyber Protocol</h1>
+      <p class="lead">DoD-vetted offensive security specialist delivering ethical, compliance-first penetration testing, vulnerability assessments, and defense hardening for organizations that cannot afford compromise.</p>
     </section>
 
-    <!-- Core Capabilities (grid cards) -->
-    <section class="core-capabilities">
-        <div class="container">
-            <h2>Core Capabilities</h2>
-            <div class="capabilities-grid">  <!-- New class; add CSS if needed, or reuse .cred-grid / .values-grid styles -->
-                <div class="capability-card">
-                    <h3>Network Support</h3>
-                    <p>24/7 remote monitoring, configuration, hardening, patching, troubleshooting, and performance optimization for routers, switches, firewalls, and infrastructure. Expertise across Cisco, Meraki, SonicWall, Aruba, Dell, and comparable platforms.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>Website Security & Management</h3>
-                    <p>Secure site creation and rebuilds, comprehensive hardening, vulnerability remediation, ongoing updates, and maintenance—supporting static sites, WordPress, Wix, Squarespace, Shopify, and custom code environments.</p>
-                </div>
-                <div class="capability-card">
-                    <h3>Ethical Penetration Testing</h3>
-                    <p>Scoped, non-destructive offensive assessments with detailed reporting, risk prioritization, proof-of-concept demonstrations, and step-by-step remediation guidance—conducted under strict Rules of Engagement.</p>
-                </div>
-            </div>
-        </div>
+    <section class="mission">
+      <h2>Mission</h2>
+      <p>To provide elite-level offensive security services rooted in real-world classified experience, ensuring clients receive proactive, actionable intelligence to outmaneuver threats.</p>
     </section>
 
-    <!-- New: Core Values (reusing existing .values-grid structure) -->
     <section class="values">
-        <div class="container">
-            <h2>Core Values</h2>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-header">
-                        <!-- Keep or update icon; e.g., trust/integrity icon -->
-                        <img src="assets/img/icons/trust.png" alt="Integrity Icon" width="50">
-                        <h3>Integrity & Transparency</h3>
-                    </div>
-                    <p>Full honesty in every assessment and recommendation, strict adherence to agreed scopes, and clear, jargon-free communication.</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-header">
-                        <img src="assets/img/icons/secure.png" alt="Proactive Icon" width="50">
-                        <h3>Proactive & Reliable</h3>
-                    </div>
-                    <p>Focus on preventing issues before they arise through ongoing monitoring, timely patching, and consistent care—no reactive surprises.</p>
-                </div>
-
-                <div class="value-item">
-                    <div class="value-header">
-                        <img src="assets/img/icons/report-card.png" alt="Results Icon" width="50">
-                        <h3>Results-Oriented Accountability</h3>
-                    </div>
-                    <p>Deliver measurable improvements in security posture, uptime, and risk reduction, with direct senior access and committed long-term partnership.</p>
-                </div>
-            </div>
+      <h2>Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <img src="assets/img/icons/shield.png" alt="Integrity Icon" width="50">
+          <h3>Integrity & Ethics</h3>
+          <p>Strict adherence to Rules of Engagement, full transparency, and zero tolerance for unauthorized actions.</p>
         </div>
+        <div class="value-item">
+          <img src="assets/img/icons/lock.png" alt="Compliance Icon" width="50">
+          <h3>Compliance-First</h3>
+          <p>Experience in STIG/RMF/NIST-aligned environments ensures every engagement meets regulatory and security standards.</p>
+        </div>
+        <div class="value-item">
+          <img src="assets/img/icons/shield.png" alt="Results Icon" width="50">
+          <h3>Results-Driven</h3>
+          <p>Focus on real-world impact: prioritized findings, remediation guidance, and continuous improvement.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="container">
-            <h2>Why Organizations Choose The Cyber Protocol</h2>
-            <ul>
-                <li>Predictable monthly pricing with transparent minimums and no surprise hourly charges</li>
-                <li>Direct access to senior-level expertise—no multi-tier support queues</li>
-                <li>Proactive prevention of issues rather than reactive firefighting</li>
-                <li>Minimum 12-month commitments that ensure priority response and consistent care</li>
-            </ul>
-            <p>The Cyber Protocol, LLC is built on accountability, technical depth, and a commitment to delivering results that matter to your business.</p>
-            <a href="contact.html" class="btn primary">Contact us to discuss your environment and receive a tailored proposal</a>
+    <section class="credentials">
+      <h2>Credentials & Experience</h2>
+      <div class="cred-grid">
+        <div class="cred-card">
+          <div class="cred-header">
+            <img src="assets/img/icons/shield.png" alt="Clearance Icon" width="50">
+            <h3>Secret Security Clearance</h3>
+          </div>
+          <p>Active U.S. Department of Defense clearance, enabling work in classified and high-sensitivity environments.</p>
         </div>
+
+        <div class="cred-card">
+          <div class="cred-header">
+            <img src="assets/img/icons/lock.png" alt="DoD Icon" width="50">
+            <h3>DoD Environments</h3>
+          </div>
+          <p>Hands-on support for NIPR/SIPR networks, STIG/RMF compliance, anomaly monitoring, patch validation, firewall/VPN support, and incident containment in mission-critical settings.</p>
+        </div>
+
+        <div class="cred-card">
+          <div class="cred-header">
+            <img src="assets/img/icons/shield.png" alt="Certs Icon" width="50">
+            <h3>Certifications</h3>
+          </div>
+          <ul>
+            <li>CCNA (Cisco Certified Network Associate)</li>
+            <li>CompTIA Security+</li>
+            <li>CompTIA CySA+</li>
+            <li>Cisco CyberOps Associate</li>
+            <li>SANS Applied Cybersecurity (BACS) – In Progress (GIAC GPEN, GCIH, GXPN track)</li>
+          </ul>
+        </div>
+
+        <div class="cred-card">
+          <div class="cred-header">
+            <img src="assets/img/icons/lock.png" alt="Hybrid Icon" width="50">
+            <h3>Hybrid Red-Blue Expertise</h3>
+          </div>
+          <p>Adversary simulation, exploit validation, detection rule engineering (SIEM/EDR), network forensics, malware analysis, Python/PowerShell automation for threat hunting and misconfiguration detection.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>© 2015 - 2026 The Cyber Protocol, LLC. All rights reserved.</p>
-        </div>
-    </footer>
+    <section class="approach">
+      <h2>Our Approach</h2>
+      <p>Every engagement is built on strict ethical standards: written Rules of Engagement (RoE), precisely scoped testing, non-destructive methods, full transparency, and prioritized remediation guidance. Experience in classified environments ensures a compliance-first mindset with zero tolerance for shortcuts or risk.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2015–2025 The Cyber Protocol<br>
+    Always Hunting. Always Learning.
+  </footer>
 </body>
 </html>
