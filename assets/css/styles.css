@@ -644,3 +644,7 @@ footer {
   font-size: 1.6rem;        /* Slightly larger for the monthly number */
   font-weight: bold;
 }
+.price--network,
+.price--network span {
+  color: #ffffff !important;  /* Force white, matching bullets */
+}
