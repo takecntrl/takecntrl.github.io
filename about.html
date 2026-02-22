@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - The Cyber Protocol</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <!-- Add any other meta, favicon, etc., if needed -->
 </head>
 <body>
-    <!-- Navbar - consistent with site -->
+    <!-- Navbar (consistent) -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">The Cyber Protocol</a>
@@ -32,11 +31,11 @@
         </div>
     </section>
 
-    <!-- Core Capabilities -->
+    <!-- Core Capabilities (grid cards) -->
     <section class="core-capabilities">
         <div class="container">
             <h2>Core Capabilities</h2>
-            <div class="capabilities-grid">
+            <div class="capabilities-grid">  <!-- New class; add CSS if needed, or reuse .cred-grid / .values-grid styles -->
                 <div class="capability-card">
                     <h3>Network Support</h3>
                     <p>24/7 remote monitoring, configuration, hardening, patching, troubleshooting, and performance optimization for routers, switches, firewalls, and infrastructure. Expertise across Cisco, Meraki, SonicWall, Aruba, Dell, and comparable platforms.</p>
@@ -48,6 +47,39 @@
                 <div class="capability-card">
                     <h3>Ethical Penetration Testing</h3>
                     <p>Scoped, non-destructive offensive assessments with detailed reporting, risk prioritization, proof-of-concept demonstrations, and step-by-step remediation guidance—conducted under strict Rules of Engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New: Core Values (reusing existing .values-grid structure) -->
+    <section class="values">
+        <div class="container">
+            <h2>Core Values</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-header">
+                        <!-- Keep or update icon; e.g., trust/integrity icon -->
+                        <img src="assets/img/icons/trust.png" alt="Integrity Icon" width="50">
+                        <h3>Integrity & Transparency</h3>
+                    </div>
+                    <p>Full honesty in every assessment and recommendation, strict adherence to agreed scopes, and clear, jargon-free communication.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <img src="assets/img/icons/secure.png" alt="Proactive Icon" width="50">
+                        <h3>Proactive & Reliable</h3>
+                    </div>
+                    <p>Focus on preventing issues before they arise through ongoing monitoring, timely patching, and consistent care—no reactive surprises.</p>
+                </div>
+
+                <div class="value-item">
+                    <div class="value-header">
+                        <img src="assets/img/icons/report-card.png" alt="Results Icon" width="50">
+                        <h3>Results-Oriented Accountability</h3>
+                    </div>
+                    <p>Deliver measurable improvements in security posture, uptime, and risk reduction, with direct senior access and committed long-term partnership.</p>
                 </div>
             </div>
         </div>
@@ -71,7 +103,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2015 - 2026 The Cyber Protocol, LLC. All rights reserved.</p>
+            <p>© 2015 - 2026 The Cyber Protocol, LLC. All rights reserved.</p>
         </div>
     </footer>
 </body>
