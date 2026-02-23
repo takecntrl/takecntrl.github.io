@@ -1,4 +1,6 @@
-/* Base Reset & Dark Theme */
+/* ==========================================================================
+   GLOBAL RESET & BASE STYLES
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 
 body {
   background-color: #121212; /* Dark gray/black */
-  color: #ffffff;            /* White text */
+  color: #ffffff; /* White text */
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
 }
@@ -24,7 +26,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navbar */
+/* ==========================================================================
+   NAVBAR & HEADER
+   ========================================================================== */
 .navbar {
   background-color: #0a0a0a;
   padding: 15px 5%;
@@ -90,40 +94,44 @@ a:hover {
   display: block;
 }
 
-/* Hero Section */
-.hero {
+/* ==========================================================================
+   SHARED HERO SECTIONS (Home, About, Services, Contact, etc.)
+   ========================================================================== */
+.hero,
+.services-hero,
+.about-hero,
+.contact-hero {
   text-align: center;
-  padding: 100px 5%;
-  background: linear-gradient(rgba(10,10,10,0.8), rgba(10,10,10,0.8)); /* Optional bg image later */
+  padding: 120px 5% 80px;
+  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9));
   min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
+.hero h1,
+.services-hero h1,
+.about-hero h1,
+.contact-hero h1 {
+  font-size: 3.5rem;
   color: #00bfff;
+  margin-bottom: 15px;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  color: #ffffff;
-  margin: 10px 0;
+.hero .lead,
+.services-hero .lead,
+.about-hero .lead,
+.contact-hero .lead {
+  font-size: 1.4rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #cccccc;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-/* Buttons */
-.cta-buttons {
-  margin-top: 30px;
-}
-
+/* ==========================================================================
+   BUTTONS (Shared)
+   ========================================================================== */
 .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -155,186 +163,32 @@ a:hover {
   color: #000;
 }
 
-/* Mobile Responsiveness (basic) */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .hero {
-    padding: 60px 5%;
-  }
-  .hero h1 {
-    font-size: 2.8rem;
-  }
-}
-footer {
-  text-align: center;
-  padding: 30px 5%;
-  font-size: 0.9em;
-  color: #888888; /* Subtle gray */
-  background-color: #0a0a0a;
-  border-top: 1px solid #1a1a1a;
-  margin-top: 40px;
-}
-.about-hero {
-  text-align: center;
-  padding: 80px 5%;
-  background-color: #1a1a1a;
-}
-
-.credentials, .approach {
+/* ==========================================================================
+   ABOUT PAGE STYLES
+   ========================================================================== */
+.mission {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 5%;
-}
-
-.credentials h2, .approach h2 {
-  font-size: 2.5rem;
-  color: #00bfff;
-  margin-bottom: 20px;
-}
-
-.credentials ul, .approach p {
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.8;
 }
 
-.credentials ul ul {
-  margin-left: 20px;
-  list-style: disc;
-}
-
-/* Core Capabilities */
-.capabilities-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-@media (min-width: 768px) {
-    .capabilities-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-.capability-card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-.capability-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.15);
-    border-color: #00bfff;
-}
-.capability-card h3 {
-    color: #00bfff;
-    margin-bottom: 1rem;
-}
-
-/* Why Choose */
-.why-choose ul {
-    list-style: none;
-    padding: 0;
-}
-.why-choose li {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-.why-choose li::before {
-    content: "✓";
-    color: #00bfff;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
-/* Reuse existing .btn.primary if present, or add: */
-.btn.primary {
-    background: #00bfff;
-    color: #000;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s;
-}
-.btn.primary:hover {
-    background: #009acd;
-    transform: translateY(-2px);
-}
-
-/* Core Values - Three Cards in Row, Inline Icons */
-.values {
+.capabilities {
   max-width: 1200px;
   margin: 0 auto 80px;
   padding: 0 5%;
-  text-align: center;
 }
 
-.values h2 {
+.capabilities h2 {
+  text-align: center;
   font-size: 2.5rem;
   color: #00bfff;
   margin-bottom: 40px;
 }
 
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Stack on mobile */
-  gap: 40px;
-}
-
-@media (min-width: 768px) {
-  .values-grid {
-    grid-template-columns: repeat(3, 1fr); /* Three in a row on desktop/tablet */
-  }
-}
-
-.value-item {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-}
-
-.value-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 191, 255, 0.15);
-}
-
-.value-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.value-header img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  filter: brightness(1.2);
-}
-
-.value-header h3 {
-  font-size: 1.6rem;
-  margin: 0;
-  color: #00bfff;
-}
-
-.value-item p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
+/* Reuse cred-grid for capabilities */
 .cred-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -374,45 +228,14 @@ footer {
   color: #00bfff;
 }
 
-.cred-card p, .cred-card ul {
+.cred-card p {
   font-size: 1.1rem;
   line-height: 1.7;
 }
 
-.cred-card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.cred-card ul li {
-  margin-bottom: 10px;
-}
-
-.cred-card ul ul {
-  margin-left: 20px;
-  list-style: disc;
-}
-
-/* Services - Consolidated & Enhanced Cards/Grid */
-.services-hero {
-  text-align: center;
-  padding: 120px 5% 80px;
-  background: linear-gradient(rgba(10,10,10,0.9), rgba(10,10,10,0.9));
-}
-
-.services-hero h1 {
-  font-size: 3.5rem;
-  color: #00bfff;
-  margin-bottom: 15px;
-}
-
-.services-hero .lead {
-  font-size: 1.4rem;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #cccccc;
-}
-
+/* ==========================================================================
+   SERVICES PAGE STYLES
+   ========================================================================== */
 .package-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -441,7 +264,7 @@ footer {
   border-color: #00bfff;
   background-color: #1e2a3a;
   box-shadow: 0 0 25px rgba(0, 191, 255, 0.4);
-  transform: scale(1.05); /* Slight size boost */
+  transform: scale(1.05);
 }
 
 .package-header {
@@ -507,46 +330,93 @@ footer {
   color: #cccccc;
 }
 
-.contact-cta {
+/* Network-specific price override */
+.price--network {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 20px 0 25px;
+  line-height: 1.4;
   text-align: center;
-  font-size: 1.3rem;
-  margin: 40px 0;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.contact-cta a {
-  color: #00bfff;
+.price--network span {
+  font-size: 1.6rem;
   font-weight: bold;
+  color: #ffffff;
 }
 
-.contact-cta a:hover {
-  text-decoration: none;
-  color: #009acd;
+/* ==========================================================================
+   VALUES / WHY CHOOSE US (Shared across pages)
+   ========================================================================== */
+.values {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 5%;
+  text-align: center;
 }
 
-/* Force 3 columns on desktop/wide screens */
-@media (min-width: 1024px) {
-  .package-grid {
+.values h2 {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .values-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .package-card {
-    padding: 25px 15px;
-  }
-  .package-header h2 {
-    font-size: 1.8rem;
-  }
+.value-item {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
-/* Contact Page - Two Top Cards + Full-Width Notes Below */
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 191, 255, 0.15);
+}
+
+.value-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.value-header img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.value-header h3 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #00bfff;
+}
+
+.value-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   CONTACT PAGE STYLES
+   ========================================================================== */
 .contact-hero {
   text-align: center;
   padding: 120px 5% 80px;
@@ -574,14 +444,14 @@ footer {
 
 .contact-row {
   display: grid;
-  grid-template-columns: 1fr; /* Stack on mobile */
+  grid-template-columns: 1fr;
   gap: 40px;
   margin-bottom: 60px;
 }
 
 @media (min-width: 768px) {
   .contact-row {
-    grid-template-columns: repeat(2, 1fr); /* Fiverr + Email side-by-side */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -636,78 +506,63 @@ footer {
   white-space: normal;
 }
 
-/* Important Notes - Full-width, centered, standout */
-.important-notes {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 50px 40px;
-  background-color: #1e2a3a;
-  border: 2px solid #00bfff;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
-}
-
-.important-notes h2 {
-  color: #ffffff;
-}
-
-.price--network {
-  font-size: 1.4rem;        /* Matches bullet size range, readable but not tiny */
-  font-weight: 600;         /* Semi-bold instead of full bold */
-  color: #00bfff;           /* Your accent blue */
-  margin: 20px 0 25px;
-  line-height: 1.4;
+/* ==========================================================================
+   FOOTER & MISC
+   ========================================================================== */
+footer {
   text-align: center;
+  padding: 30px 5%;
+  font-size: 0.9em;
+  color: #888888;
+  background-color: #0a0a0a;
+  border-top: 1px solid #1a1a1a;
+  margin-top: 40px;
 }
 
-.price--network span {
-  font-size: 1.6rem;        /* Slightly larger for the monthly number */
-  font-weight: bold;
-}
-.price--network,
-.price--network span {
-  color: #ffffff !important;  /* Force white, matching bullets */
+/* ==========================================================================
+   MOBILE RESPONSIVENESS (Global)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero,
+  .services-hero,
+  .about-hero,
+  .contact-hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1,
+  .services-hero h1,
+  .about-hero h1,
+  .contact-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .package-card {
+    padding: 25px 15px;
+  }
+
+  .package-header h2 {
+    font-size: 1.8rem;
+  }
 }
 
-/* Why Choose upgrades */
-.why-choose h2 {
-  color: #00bfff; /* Ensure blue if not already */
-  margin-bottom: 1.5rem;
+/* ==========================================================================
+   MEDIA QUERIES FOR GRIDS (Shared)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .package-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.why-choose-card {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.why-choose-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
-  border-color: #00bfff;
-}
-
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem;
-}
-
-.benefits-list li {
-  margin: 1rem 0;
-  padding-left: 1.8rem;
-  position: relative;
-  font-size: 1.1rem;
-}
-
-.benefits-list li::before {
-  content: "✓";
-  color: #00bfff;
-  position: absolute;
-  left: 0;
-  font-size: 1.3rem;
-  line-height: 1.4;
+@media (min-width: 768px) {
+  .values-grid,
+  .cred-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
