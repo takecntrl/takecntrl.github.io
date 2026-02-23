@@ -668,3 +668,46 @@ footer {
 .price--network span {
   color: #ffffff !important;  /* Force white, matching bullets */
 }
+
+/* Why Choose upgrades */
+.why-choose h2 {
+  color: #00bfff; /* Ensure blue if not already */
+  margin-bottom: 1.5rem;
+}
+
+.why-choose-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-choose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 191, 255, 0.2);
+  border-color: #00bfff;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.benefits-list li {
+  margin: 1rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.benefits-list li::before {
+  content: "✓";
+  color: #00bfff;
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
