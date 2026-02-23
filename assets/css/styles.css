@@ -566,3 +566,45 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+/* ==========================================================================
+   Homepage Enhancements
+   ========================================================================== */
+.hero {
+  padding: 140px 5% 100px;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin: 10px 0 30px;
+}
+
+.value-props {
+  max-width: 1400px;
+  margin: 0 auto 80px;
+  padding: 0 5%;
+}
+
+.cta-banner {
+  text-align: center;
+  padding: 60px 5%;
+  background-color: #1a1a1a;
+  border-top: 1px solid #333;
+}
+
+.cta-banner p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn.small {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
