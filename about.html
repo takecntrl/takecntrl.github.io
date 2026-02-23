@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - The Cyber Protocol</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">  <!-- Use / for root-relative -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
+  <!-- Standardized Navbar - matches other pages -->
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="/assets/img/logo.png" alt="The Cyber Protocol Logo" style="height: 50px;">  <!-- Adjust height if needed -->
+        <img src="/assets/img/logo.png" alt="The Cyber Protocol Logo" style="height: 45px; vertical-align: middle;">
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>  <!-- Add dropdown later if wanted -->
+        <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="https://www.fiverr.com/takecntrl" target="_blank">Fiverr</a></li>
@@ -24,7 +25,7 @@
   </nav>
 
   <main>
-    <!-- Hero/Intro Section – h1 blue via CSS -->
+    <!-- Hero/Intro - blue h1 -->
     <section class="about-hero">
       <div class="container">
         <h1>About The Cyber Protocol</h1>
@@ -33,7 +34,7 @@
       </div>
     </section>
 
-    <!-- Core Capabilities – grid cards for MSP feel, h2 blue, h3 blue in cards -->
+    <!-- Core Capabilities - 3 cards, MSP-style -->
     <section class="core-capabilities">
       <div class="container">
         <h2>Core Capabilities</h2>
@@ -54,48 +55,20 @@
       </div>
     </section>
 
-    <!-- Core Values – keep as-is from live, icons + blue h3 -->
-    <section class="values">
-      <div class="container">
-        <h2>Core Values</h2>
-        <div class="values-grid">
-          <div class="value-item">
-            <div class="value-header">
-              <img src="/assets/img/icons/trust.png" alt="Integrity Icon" width="50">
-              <h3>Integrity & Transparency</h3>
-            </div>
-            <p>Full honesty in every assessment and recommendation, strict adherence to agreed scopes, and clear, jargon-free communication.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-header">
-              <img src="/assets/img/icons/secure.png" alt="Proactive Icon" width="50">
-              <h3>Proactive & Reliable</h3>
-            </div>
-            <p>Focus on preventing issues before they arise through ongoing monitoring, timely patching, and consistent care—no reactive surprises.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-header">
-              <img src="/assets/img/icons/report-card.png" alt="Results Icon" width="50">
-              <h3>Results-Oriented Accountability</h3>
-            </div>
-            <p>Deliver measurable improvements in security posture, uptime, and risk reduction, with direct senior access and committed long-term partnership.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose – bullets with checkmarks via CSS if added, CTA -->
+    <!-- Why Choose - upgraded to card-like with checkmarks, blue heading -->
     <section class="why-choose">
       <div class="container">
         <h2>Why Organizations Choose The Cyber Protocol</h2>
-        <ul>
-          <li>Predictable monthly pricing with transparent minimums and no surprise hourly charges</li>
-          <li>Direct access to senior-level expertise—no multi-tier support queues</li>
-          <li>Proactive prevention of issues rather than reactive firefighting</li>
-          <li>Minimum 12-month commitments that ensure priority response and consistent care</li>
-        </ul>
-        <p>The Cyber Protocol, LLC is built on accountability, technical depth, and a commitment to delivering results that matter to your business.</p>
-        <a href="contact.html" class="btn primary">Contact us to discuss your environment and receive a tailored proposal</a>
+        <div class="why-choose-card">  <!-- Wrapper for subtle card effect -->
+          <ul class="benefits-list">
+            <li>Predictable monthly pricing with transparent minimums and no surprise hourly charges</li>
+            <li>Direct access to senior-level expertise—no multi-tier support queues</li>
+            <li>Proactive prevention of issues rather than reactive firefighting</li>
+            <li>Minimum 12-month commitments that ensure priority response and consistent care</li>
+          </ul>
+          <p>The Cyber Protocol, LLC is built on accountability, technical depth, and a commitment to delivering results that matter to your business.</p>
+          <a href="contact.html" class="btn primary">Contact us to discuss your environment and receive a tailored proposal</a>
+        </div>
       </div>
     </section>
   </main>
