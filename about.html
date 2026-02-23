@@ -1,82 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - The Cyber Protocol</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
-<body>
-  <!-- Standardized Navbar - matches other pages -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="/assets/img/logo.png" alt="The Cyber Protocol Logo" style="height: 45px; vertical-align: middle;">
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.fiverr.com/takecntrl" target="_blank">Fiverr</a></li>
-      </ul>
-    </div>
-  </nav>
+<main>
+  <section class="about-hero">
+    <h1>The Cyber Protocol, LLC</h1>
+    <p class="lead">
+      The Cyber Protocol, LLC delivers reliable network support, website security, and ethical penetration testing to organizations that require consistent uptime, reduced risk, and proactive protection.
+    </p>
+  </section>
 
-  <main>
-    <!-- Hero/Intro - blue h1 -->
-    <section class="about-hero">
-      <div class="container">
-        <h1>About The Cyber Protocol</h1>
-        <p class="lead">The Cyber Protocol, LLC delivers reliable network support, website security, and ethical penetration testing to organizations that require consistent uptime, reduced risk, and proactive protection.</p>
-        <p>We combine deep technical expertise with clear communication and accountable service delivery to keep critical systems secure and operational.</p>
-      </div>
-    </section>
+  <section class="mission">
+    <p>
+      We combine deep technical expertise with clear communication and accountable service delivery to keep critical systems secure and operational.
+    </p>
+  </section>
 
-    <!-- Core Capabilities - 3 cards, MSP-style -->
-    <section class="core-capabilities">
-      <div class="container">
-        <h2>Core Capabilities</h2>
-        <div class="capabilities-grid">
-          <div class="capability-card">
-            <h3>Network Support</h3>
-            <p>24/7 remote monitoring, configuration, hardening, patching, troubleshooting, and performance optimization for routers, switches, firewalls, and infrastructure. Expertise across Cisco, Meraki, SonicWall, Aruba, Dell, and comparable platforms.</p>
-          </div>
-          <div class="capability-card">
-            <h3>Website Security & Management</h3>
-            <p>Secure site creation and rebuilds, comprehensive hardening, vulnerability remediation, ongoing updates, and maintenance—supporting static sites, WordPress, Wix, Squarespace, Shopify, and custom code environments.</p>
-          </div>
-          <div class="capability-card">
-            <h3>Ethical Penetration Testing</h3>
-            <p>Scoped, non-destructive offensive assessments with detailed reporting, risk prioritization, proof-of-concept demonstrations, and step-by-step remediation guidance—conducted under strict Rules of Engagement.</p>
-          </div>
+  <section class="capabilities">
+    <h2>Core Capabilities</h2>
+    <div class="cred-grid"> <!-- Reusing your existing grid class for 3-column layout on desktop -->
+
+      <div class="cred-card">
+        <div class="cred-header">
+          <img src="assets/img/icons/network.png" alt="Network Support Icon" width="50">
+          <h3>Network Support</h3>
         </div>
+        <p>
+          24/7 remote monitoring, configuration, hardening, patching, troubleshooting, and performance optimization for routers, switches, firewalls, and infrastructure. Expertise across Cisco, Meraki, SonicWall, Aruba, Dell, and comparable platforms.
+        </p>
       </div>
-    </section>
 
-    <!-- Why Choose - upgraded to card-like with checkmarks, blue heading -->
-    <section class="why-choose">
-      <div class="container">
-        <h2>Why Organizations Choose The Cyber Protocol</h2>
-        <div class="why-choose-card">  <!-- Wrapper for subtle card effect -->
-          <ul class="benefits-list">
-            <li>Predictable monthly pricing with transparent minimums and no surprise hourly charges</li>
-            <li>Direct access to senior-level expertise—no multi-tier support queues</li>
-            <li>Proactive prevention of issues rather than reactive firefighting</li>
-            <li>Minimum 12-month commitments that ensure priority response and consistent care</li>
-          </ul>
-          <p>The Cyber Protocol, LLC is built on accountability, technical depth, and a commitment to delivering results that matter to your business.</p>
-          <a href="contact.html" class="btn primary">Contact us to discuss your environment and receive a tailored proposal</a>
+      <div class="cred-card">
+        <div class="cred-header">
+          <img src="assets/img/icons/shield-lock.png" alt="Website Security Icon" width="50">
+          <h3>Website Security & Management</h3>
         </div>
+        <p>
+          Secure site creation and rebuilds, comprehensive hardening, vulnerability remediation, ongoing updates, and maintenance—supporting static sites, WordPress, Wix, Squarespace, Shopify, and custom code environments.
+        </p>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>© 2015–2026 The Cyber Protocol, LLC. All rights reserved.</p>
+      <div class="cred-card">
+        <div class="cred-header">
+          <img src="assets/img/icons/penetration-testing.png" alt="Penetration Testing Icon" width="50">
+          <h3>Ethical Penetration Testing</h3>
+        </div>
+        <p>
+          Scoped, non-destructive offensive assessments with detailed reporting, risk prioritization, proof-of-concept demonstrations, and step-by-step remediation guidance—conducted under strict Rules of Engagement.
+        </p>
+      </div>
+
     </div>
-  </footer>
-</body>
-</html>
+  </section>
+
+  <section class="values">
+    <h2>Why Organizations Choose The Cyber Protocol</h2>
+    <div class="values-grid">
+      <div class="value-item">
+        <div class="value-header">
+          <h3>Predictable Pricing</h3>
+        </div>
+        <p>Transparent monthly minimums with no surprise hourly charges.</p>
+      </div>
+
+      <div class="value-item">
+        <div class="value-header">
+          <h3>Direct Expertise</h3>
+        </div>
+        <p>Access to senior-level technical support—no multi-tier queues.</p>
+      </div>
+
+      <div class="value-item">
+        <div class="value-header">
+          <h3>Proactive Prevention</h3>
+        </div>
+        <p>Focus on preventing issues rather than reactive firefighting.</p>
+      </div>
+
+      <div class="value-item">
+        <div class="value-header">
+          <h3>Long-Term Commitment</h3>
+        </div>
+        <p>Minimum 12-month engagements that ensure priority response and consistent care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <p>
+      The Cyber Protocol, LLC is built on accountability, technical depth, and a commitment to delivering results that matter to your business.<br>
+      <a href="contact.html">Contact us</a> to discuss your environment and receive a tailored proposal.
+    </p>
+  </section>
+</main>
